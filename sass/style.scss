@@ -1,0 +1,296 @@
+@use 'navfooter';
+$fontfamily: (
+    "monospace": ("Lucida Console", Courier, monospace),
+    "Georgia": (Georgia, 'Times New Roman', Times, serif),
+);
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: map-get($map: $fontfamily, $key: monospace);
+    background-color: black;
+    color: white;
+    font-size: 100%;
+}
+.header-general {
+    font-family: map-get($map: $fontfamily, $key: monospace);
+    font-size: 1em;
+    background-color: navfooter.$fffooterbgcolor;
+    position: fixed;
+    nav {
+        div {
+            ul{
+                gap: 2%;
+                .li-facebook {
+                    padding-left: 30%;
+                }
+            }
+        }
+    }
+}
+li {
+    list-style-type: none;
+    #imagen-ico-index {
+       width: 2em;
+       height: 2.4em;
+       transition: all 2s;
+    }
+}
+.link-header-div {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.cabeza  {
+    padding-left: 12%;
+    padding-top: 10%;
+}
+main {
+    font-family: sans-serif;
+}
+.main-index{
+   @extend main;
+   padding-top: 8em;
+}
+.parrafo1 {
+    padding-right: 16%;
+    line-height: 200%;
+}
+.main-index {
+    .index-main-section1 {
+        p {
+            font-family: map-get($map: $fontfamily, $key: monospace);
+            letter-spacing: 0.1em;
+        }
+        h1 {
+            padding-bottom: 3%;
+            font-family: map-get($map: $fontfamily, $key: Georgia);
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .index-main-section2 {
+        div{
+            font-family: map-get($map: $fontfamily, $key: monospace);
+            img {
+                width: 80%;
+                height: 60%;
+            }
+        }
+    }
+}
+.main-sobre-mi {
+    padding-top: 8em;
+    margin-bottom: 5%;
+    font-family: map-get($map: $fontfamily, $key: Georgia);
+    section {
+        img {
+            width: 70%;
+            
+        }
+        p {
+            background-color: rgb(233, 233, 233);
+            margin-left: 30%;
+            margin-right: 30%;
+            padding: 3%;
+            font-family: map-get($map: $fontfamily, $key: monospace);
+        }
+    }
+}
+.index-main-section2 {
+    div {
+        img {
+           width: 15em;
+           height: 15em;
+        }
+        div{
+            background-color: rgb(233, 233, 233);
+            margin-top: -10%;
+            margin-left: 25%;
+            margin-right: 25%;
+            padding: 4%;
+        }
+    }
+}
+.main-estilo-de-vida{
+    padding-top: 10em;
+    padding-bottom: 5em;
+    font-family: map-get($map: $fontfamily, $key: Georgia);
+    h1 {
+        padding-bottom: 3%;
+    }
+    img {
+        width: 100%;
+    }
+}
+.familia-main {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    h1 {
+        font-family: map-get($map: $fontfamily, $key: Georgia);
+        padding-bottom: 3%;
+    }
+    img {
+        width: 100%;
+    }
+    p {
+        padding-top: 4%;
+        font-family:  map-get($map: $fontfamily, $key: monospace);
+    }
+}
+.main-alimentacion {
+    padding-top: 10em;
+    padding-bottom: 5%;
+    h1 {
+        text-align: center;
+        font-family: map-get($map: $fontfamily, $key: Georgia);
+        padding-bottom: 3%;
+    } 
+    p {
+        font-family: map-get($map: $fontfamily, $key: monospace);
+    }
+}
+#imagen-ico-index {
+   transition: all 2s;
+}
+.video1:hover
+.texto1-cc {
+    margin-left: 12%;
+    margin-top: 10%;
+    font-size: 2.4em;
+}
+input  {
+    margin-left: 12%;
+    margin-top: 0.3%;
+}
+.button-div {
+    margin-right: 72%;
+    margin-top: 3%;
+}
+@mixin input_div {
+    background-color: rgba(49, 49, 49, 0.966);
+    border: none;
+    width: 16em;
+    padding: 0.3%;
+}
+.input-div {
+   @include input_div();
+}
+footer {
+    padding-bottom: 1.35%;
+}
+.footer-index {
+    background-color: navfooter.$fffooterbgcolor;
+    font-family: map-get($map: $fontfamily, $key: monospace);
+    form {
+        text-align: center;
+        input {
+            margin-left: 0%;
+            padding-left: 24.5%;
+            padding-right: 24.5%;
+        }
+        div {
+            input {
+                padding-right: 30%;
+                padding-left: 30%;
+                background-color: rgb(44, 44, 44);
+                color: white;
+                padding-top: 0.4%;
+                padding-bottom: 0.4%;
+                border: 0.1em, ridge;
+            }
+        }
+    }
+}
+@media (max-width: 700px){
+    .header-general {
+        font-family: map-get($map: $fontfamily, $key: monospace);
+        font-size: 0.72em;
+        background-color: #ffe598;
+        nav {
+            div {
+                ul{
+                    gap: 2%;
+                    .li-facebook {
+                        padding-left: 5%;
+                    }
+                    .icono-li {
+                        margin-left: -10%;
+                    }
+                }
+            }
+        }
+    }
+    .footer-index{
+        form {
+            input {
+                margin-left: 0%;
+            }
+            div {
+                input {
+                    padding-left: 42.5%;
+                    padding-right: 42.5%;
+                }
+            }
+        }
+    }
+    .main-alimentacion {
+        p {
+            padding: 5%;
+        }
+    }
+}
+@media (max-width: 350px){
+    .header-general {
+        font-family: map-get($map: $fontfamily, $key: monospace);
+        font-size: 4%;
+        background-color: #ffe598;
+        margin-left: 0%;
+        padding-left: 0%;
+        nav {
+            div {
+                ul{
+                    gap: 2%;
+                    .li-facebook {
+                        padding-left: 0%;
+                    }
+                    .icono-li {
+                        margin-left: -10%;
+                    }
+                }
+            }
+        }
+    }
+    .main-index{
+        .index-main-section2{
+            div{
+                div{
+                    font-size: 50%;
+                }
+            }
+        }
+    }
+    .footer-index{
+        padding-left: 0%;
+        margin: 0%;
+        form {
+            input {
+                padding: 0%;
+                margin: 0%;
+                width: 50%;
+            }
+            div {
+                input {
+                   padding: 0%;
+                }
+            }
+        }
+    }
+    .main-alimentacion {
+        p {
+            padding: 5%;
+        }
+    }
+}
